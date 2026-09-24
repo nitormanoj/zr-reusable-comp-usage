@@ -1,0 +1,19 @@
+/* Keep the chip component compact */
+zr-chip {
+  display: inline-flex;
+  width: fit-content;
+  max-width: 100%;
+  flex: 0 0 auto;
+}
+
+zr-chip .p-chip {
+  display: inline-flex;
+  width: fit-content;
+  max-width: 100%;
+  background: #e5e7eb;
+  color: #222222;
+}
+
+zr-chip .p-chip-label {
+  overflow-wrap: anywhere;
+}

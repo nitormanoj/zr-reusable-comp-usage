@@ -1,0 +1,77 @@
+
+<div class="app-layout">
+
+  @if (menuOpen) {
+    <div
+      class="menu-backdrop"
+      (click)="closeMenu()">
+    </div>
+  }
+
+  <aside
+    class="app-sidebar"
+    [class.mobile-open]="menuOpen">
+
+    <div class="brand">
+      <div class="brand-logo">ZR</div>
+
+      <div>
+        <h2>ZR Components</h2>
+      </div>
+    </div>
+
+    <div class="menu-section">
+      <span class="menu-label">
+        ZR COMPONENT LIBRARY
+      </span>
+
+      <nav class="navigation">
+
+        <a
+          routerLink="/chip"
+          routerLinkActive="active"
+          (click)="closeMenu()">
+
+          <span class="menu-icon">◈</span>
+          <span>Chip</span>
+        </a>
+
+       <!-- <a
+          routerLink="/sidebar"
+          routerLinkActive="active"
+          (click)="closeMenu()">
+
+          <span class="menu-icon">▤</span>
+          <span>Sidebar</span>
+        </a>-->
+
+      </nav>
+    </div>
+
+    <div class="sidebar-footer">
+      <span class="status-dot"></span>
+      Component Library
+      <span class="version">v1.0.4</span>
+    </div>
+
+  </aside>
+
+
+  <main class="main-content">
+    <header class="top-header">
+      <div class="header-left">
+        <button
+          class="mobile-menu-button"
+          type="button"
+          aria-label="Toggle navigation"
+          (click)="toggleMenu()">
+          ☰
+        </button>
+      </div>
+    </header>
+
+    <div class="page-content">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+</div>
