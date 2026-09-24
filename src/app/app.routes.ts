@@ -15,13 +15,6 @@ export const routes: Routes = [
       ).then(m => m.ChipShowcase)
   },
   {
-    path: 'sidebar',
-    loadComponent: () =>
-      import(
-        './features//showcase/sidebar-showcase/sidebar-showcase'
-      ).then(m => m.SidebarShowcase)
-  },
-  {
     path: '**',
     redirectTo: 'chip'
   }
